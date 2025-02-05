@@ -1,0 +1,11 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.Multimedia" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Personaliza los atributos para el tema oscuro -->
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="android:windowBackground">@color/black</item>
+    </style>
+</resources>

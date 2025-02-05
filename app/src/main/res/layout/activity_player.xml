@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFCFC"
+    android:layout_marginTop="90dp"
+    android:padding="16dp"
+    tools:context=".PlayerActivity">
+
+    <!-- Imagen de la carátula de la canción centrada -->
+    <ImageView
+        android:id="@+id/imageView_ADC"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ts"
+        app:layout_constraintBottom_toTopOf="@+id/textArtits_ADC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textArtits_ADC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Artist"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSongTitle_ADC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!-- Título de la canción -->
+    <TextView
+        android:id="@+id/textViewSongTitle_ADC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Song Title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_ADC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Barra de progreso de la canción -->
+    <SeekBar
+        android:id="@+id/seekBar_ADC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutControls_ADC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Contenedor LinearLayout para todos los controles -->
+    <LinearLayout
+        android:id="@+id/linearLayoutControls_ADC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_ADC">
+
+        <!-- Botón Anterior -->
+        <ImageButton
+            android:id="@+id/buttonPrevious_ADC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Previous"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <!-- Botón Retroceder 10 segundos -->
+        <ImageButton
+            android:id="@+id/buttonRewind_ADC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Rewind"
+            android:src="@android:drawable/ic_media_rew" />
+
+        <!-- Botón Play/Pause -->
+        <ImageButton
+            android:id="@+id/buttonPlayPause_ADC"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Play/Pause"
+            android:src="@android:drawable/ic_media_play" />
+
+        <!-- Botón Stop -->
+        <ImageButton
+            android:id="@+id/buttonStop_ADC"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Stop"
+            android:src="@android:drawable/ic_media_pause" />
+
+        <!-- Botón Avanzar 10 segundos -->
+        <ImageButton
+            android:id="@+id/buttonForward_ADC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Forward"
+            android:src="@android:drawable/ic_media_ff" />
+
+        <!-- Botón Siguiente -->
+        <ImageButton
+            android:id="@+id/buttonNext_ADC"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Next"
+            android:src="@android:drawable/ic_media_next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutVolver_ADC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutControls_ADC">
+
+        <!-- Boton volver -->
+        <Button
+            android:id="@+id/buttonVolver_ADC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#A085C7"
+            android:text="Volver"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
